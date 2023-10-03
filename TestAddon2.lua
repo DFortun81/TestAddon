@@ -5,5 +5,6 @@
 --------------------------------------------------------------------------------
 -- App locals
 local appName, app = ...;
+local L = app.L;
 
-print("Hello World!");
+print(L.HELLO_WORLD);

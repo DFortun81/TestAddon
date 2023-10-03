@@ -10,4 +10,6 @@
 ## X-Curse-Project-ID: 918997
 ## SavedVariables: TestAddonData
 ## SavedVariablesPerCharacter: TestAddonSettingsPerCharacter
+locales/en.lua
+locales/de.lua
 TestAddon2.lua
