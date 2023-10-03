@@ -6,4 +6,5 @@ local appName, app = ...;
 local L = app.L;
 
 L.HELLO_WORLD = "Hallo Welt!";
---L.ADDON_SUMMARY = "|cffffffffThis is a fancy little addon developed on stream by |cffff0000Crieve|r to help people develop their own addons.|r\n\nNOTE: This is on its own line!";
+L.ADDON_SUMMARY = "|cffffffffDies ist ein schickes kleines Add-on, das von |cffff0000Crieve|r im Stream entwickelt wurde, um Leuten bei der Entwicklung ihrer eigenen Add-ons zu helfen. |r\n\nHINWEIS: Dies ist eine eigene Zeile!";
+
