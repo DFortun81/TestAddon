@@ -1,0 +1,13 @@
+## Title: TestAddon2
+## IconTexture: Interface/Addons/TestAddon2/icon
+## Name: TestAddon2
+## Notes: Addon for testing things, use as a template.
+## Author: Crieve-Sargeras
+## Version: @project-version@
+## Interface: 100107
+## X-Interface: 100107
+## X-Wago-ID: yQKyY5K7
+## X-Curse-Project-ID: 918997
+## SavedVariables: TestAddonData
+## SavedVariablesPerCharacter: TestAddonSettingsPerCharacter
+TestAddon2.lua
