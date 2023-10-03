@@ -1,5 +1,5 @@
 ## Title: TestAddon2
-## IconTexture: Interface/Addons/TestAddon2/icon
+## IconTexture: Interface/Addons/TestAddon2/assets/icon_256
 ## Name: TestAddon2
 ## Notes: Addon for testing things, use as a template.
 ## Author: Crieve-Sargeras

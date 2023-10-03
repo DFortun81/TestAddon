@@ -11,10 +11,10 @@ local L = app.L;
 local TestAddonData = _G["TestAddonData"];
 if not TestAddonData then
 	TestAddonData = {
-		relativePoint = "BOTTOMRIGHT",
-		point = "BOTTOMRIGHT",
-		x = 385,
-		y = 500,
+		relativePoint = "CENTER",
+		point = "CENTER",
+		x = 0,
+		y = 0,
 	};
 end
 
@@ -22,7 +22,7 @@ end
 local frame = CreateFrame("FRAME", nil, UIParent, BackdropTemplateMixin and "BackdropTemplate");
 app.frame = frame;
 frame:SetPoint(TestAddonData.relativePoint, TestAddonData.x, TestAddonData.y);
-frame:SetSize(640, 640);
+frame:SetSize(320, 320);
 frame:SetBackdrop({
 	bgFile = "Interface/Tooltips/UI-Tooltip-Background",
 	edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
@@ -47,6 +47,24 @@ frame:SetScript("OnMouseUp", function(self)
 	TestAddonData.x = xOfs;
 	TestAddonData.y = yOfs;
 end)
+
+local fontStringObject = frame:CreateFontString(nil, "ARTWORK", "GameFontNormalLarge");
+fontStringObject:SetPoint("TOP", 0, -6);
+fontStringObject:SetText(L.HELLO_WORLD);
+
+local fontStringObject2 = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+fontStringObject2:SetPoint("TOP", fontStringObject, "BOTTOM", 0, -6);
+fontStringObject2:SetPoint("LEFT", frame, "LEFT", 20, 0);
+fontStringObject2:SetPoint("RIGHT", frame, "RIGHT", -20, 0);
+fontStringObject2:SetText(L.ADDON_SUMMARY);
+fontStringObject2:SetTextColor(1, 0.25, 0.25);
+
+local textureObject = frame:CreateTexture(nil, "ARTWORK");
+textureObject:SetTexture("Interface/Addons/TestAddon2/assets/icon_256");
+textureObject:SetPoint("TOP", fontStringObject2, "BOTTOM", 0, -6);
+textureObject:SetPoint("LEFT", frame, "LEFT", 20, 0);
+textureObject:SetPoint("RIGHT", frame, "RIGHT", -20, 0);
+textureObject:SetPoint("BOTTOM", frame, "BOTTOM", 0, 20);
 
 -- Register some events
 local events = {};
