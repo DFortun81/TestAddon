@@ -2,6 +2,6 @@
 local appName, app = ...;
 
 local L = {
-	HELLO_WORLD = "Hello World!",
+	--HELLO_WORLD = "Hello World!",
 };
 app.L = L;

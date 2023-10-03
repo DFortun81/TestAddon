@@ -5,4 +5,4 @@ if GetLocale() ~= "deDE" then return; end
 local appName, app = ...;
 local L = app.L;
 
-L.HELLO_WORLD = "Hallo Welt!";
+--L.HELLO_WORLD = "Hallo Welt!";

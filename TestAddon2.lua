@@ -18,8 +18,6 @@ if not TestAddonData then
 	};
 end
 
-print(L.HELLO_WORLD);
-
 -- Create a Frame and attach an event to it.
 local frame = CreateFrame("FRAME", nil, UIParent, BackdropTemplateMixin and "BackdropTemplate");
 app.frame = frame;
@@ -44,7 +42,6 @@ end)
 frame:SetScript("OnMouseUp", function(self)
 	self:StopMovingOrSizing();
 	local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint()
-	print("WHERE AM I", point, relativePoint, xOfs, yOfs);
 	TestAddonData.relativePoint = relativePoint;
 	TestAddonData.point = point;
 	TestAddonData.x = xOfs;
@@ -58,7 +55,6 @@ frame:SetScript("OnEvent", function(self, e, ...) (events[e] or print)(e, ...); 
 
 events.ADDON_LOADED = function(e, addonName)
 	if addonName == appName then
-		print(e, addonName);
 		frame:UnregisterEvent("ADDON_LOADED");
 		
 		local TestAddDataGlobal = _G["TestAddonData"];
@@ -72,7 +68,6 @@ events.ADDON_LOADED = function(e, addonName)
 			end
 			_G["TestAddonData"] = TestAddonData;
 			if changed then
-				print("WHERE AM I", TestAddonData.x, TestAddonData.y);
 				frame:ClearAllPoints();
 				frame:SetPoint(TestAddonData.point, TestAddonData.x, TestAddonData.y, TestAddonData.relativePoint);
 			end
