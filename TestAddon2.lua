@@ -7,6 +7,15 @@
 local appName, app = ...;
 local L = app.L;
 
+-- Generate the version identifier.
+app.Version = GetAddOnMetadata(appName, "Version");
+if string.match(app.Version, "version") then
+	app.Version = "[Git]";
+	app.IsGit = true;
+else
+	app.Version = "v" .. app.Version;
+end
+
 -- Default Variables
 local TestAddonData = _G["TestAddonData"];
 if not TestAddonData then
@@ -65,6 +74,12 @@ textureObject:SetPoint("TOP", fontStringObject2, "BOTTOM", 0, -6);
 textureObject:SetPoint("LEFT", frame, "LEFT", 20, 0);
 textureObject:SetPoint("RIGHT", frame, "RIGHT", -20, 0);
 textureObject:SetPoint("BOTTOM", frame, "BOTTOM", 0, 20);
+
+-- app.Version
+local fontStringObject3 = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+fontStringObject3:SetPoint("BOTTOMRIGHT", -6, 10);
+fontStringObject3:SetText(app.Version);
+fontStringObject3:SetScale(0.8);
 
 -- Register some events
 local events = {};
