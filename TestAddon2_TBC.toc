@@ -1,11 +1,11 @@
-## Title: TestAddon2
+## Title: TestAddon2 |cfd9b9b9b(TBC)|r
 ## IconTexture: Interface/Addons/TestAddon2/icon
 ## Name: TestAddon2
 ## Notes: Addon for testing things, use as a template.
 ## Author: Crieve-Sargeras
 ## Version: @project-version@
-## Interface: 100107
-## X-Interface: 100107
+## Interface: 20504
+## X-Interface: 20504
 ## X-Wago-ID: 96E7ygGg
 ## X-Curse-Project-ID: 918997
 ## SavedVariables: TestAddonData
