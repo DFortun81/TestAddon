@@ -4,8 +4,8 @@
 ## Notes: Addon for testing things, use as a template.
 ## Author: Crieve-Sargeras
 ## Version: @project-version@
-## Interface: 11404
-## X-Interface: 11404
+## Interface: 11501
+## X-Interface: 11501
 ## X-Wago-ID: 96E7ygGg
 ## X-Curse-Project-ID: 918997
 ## SavedVariables: TestAddonData
